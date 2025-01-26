@@ -68,7 +68,7 @@ const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
 addToCartButtons.forEach(button => {
   button.addEventListener('click', () => {  
     const productId = button.dataset.productId; //this will return the value of the data attribute of the button
-    console.log(productId);
+    // console.log(productId);
     //check if the product is already in the cart
     let matchingItem;
     cart.forEach(item => {
@@ -86,8 +86,15 @@ addToCartButtons.forEach(button => {
         });
       }
 
+      //looping through the carSt to sum the quantity
+      let cartQuantity = 0;
+      cart.forEach(item => {
+        cartQuantity += item.quantity;
+      });
+
+      document.querySelector('.cart-quantity').innerHTML = cartQuantity;
     
-    console.log(cart);
+    // console.log(cart);
   });
 });
 
