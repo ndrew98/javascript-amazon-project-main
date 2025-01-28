@@ -1,6 +1,7 @@
 
 //Js(save the data ,generate the html,make it interactive using the dom)
-
+import {cart} from '../data/cart.js';
+import {products} from '../data/products.js';
 
 let productsHTML = '';
 products.forEach(product => {
