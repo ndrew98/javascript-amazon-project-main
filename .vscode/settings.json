@@ -1,3 +1,22 @@
 {
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "dbcode.connections": [
+    {
+      "connectionId": "j7q0UEbP521OYjDstAX8e",
+      "name": "Local Database",
+      "driver": "mysql",
+      "color": "#009670",
+      "connectionType": "host",
+      "host": "127.0.0.1",
+      "port": 3306,
+      "ssl": false,
+      "username": "root",
+      "password": "",
+      "savePassword": "secretStorage",
+      "connectionTimeout": 30,
+      "driverOptions": {
+        "retrievePublickey": true
+      }
+    }
+  ]
 }
