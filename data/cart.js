@@ -60,3 +60,22 @@ export function removeFromCart(productId) {
 
   saveToStorage();
 }
+
+/**
+ * Update the delivery option of a product in the cart.
+ * @param {number} productId The id of the product to update.
+ * @param {number} deliveryOptionId The delivery option to set for the product.
+ */
+
+export function updateDeliveryOption(productId, deliveryOptionId) {
+  let matchingItem;
+  cart.forEach((cartItem) => {
+    if (productId === cartItem.productId) {
+      matchingItem = cartItem;
+    }
+  });
+
+  matchingItem.deliveryOptionId = deliveryOptionId;
+
+  saveToStorage();
+}
